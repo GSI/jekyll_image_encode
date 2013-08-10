@@ -1,0 +1,21 @@
+h1. Jekyll Image Encode
+
+This Jekyll plugin fetches images from the web and renders their according base64 codes.
+
+Be sure to know your reasons when using it.
+
+
+h2. Installation
+
+Set the variable @PATH_TO_JEKYLL_SITE@ correctly and run these commands accordingly:
+
+pre. echo "gem 'jekyll_image_encode'" >> $PATH_TO_JEKYLL_SITE/Gemfile
+bundle
+echo "require 'jekyll_image_encode'" >> $PATH_TO_JEKYLL_SITE/_plugins/ext.rb
+
+
+h2. Usage
+
+In the source attribute of an HTML *img* element, call the *base64-tag* providing the image URL as the only parameter:
+
+pre. <img src="{% base64 http://example.org/image.png %}" />
