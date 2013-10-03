@@ -9,15 +9,16 @@ h2. Installation
 
 Set the constant @PATH_TO_JEKYLL_SITE@ correctly and run these commands accordingly:
 
-pre. echo "gem 'jekyll_image_encode'" >> $PATH_TO_JEKYLL_SITE/Gemfile
+pre. cd ${PATH_TO_JEKYLL_SITE}
+echo "gem 'jekyll_image_encode'" >> Gemfile
 bundle
-echo "require 'jekyll_image_encode'" >> $PATH_TO_JEKYLL_SITE/_plugins/ext.rb
+echo "require 'jekyll_image_encode'" >> _plugins/ext.rb
 
 
 *Alternatively* you may accomplish the same without @echo@ and @bundle@:
 
 # Install the plugin by running @gem install jekyll_image_encode@
-# Add the line @require 'jekyll_image_encode'@ to *./_plugins/ext.rb*
+# Add the line @require 'jekyll_image_encode'@ to *_plugins/ext.rb*
 
 
 h2. Usage
