@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'jekyll_image_encode'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2013-08-10'
   s.summary     = "Jekyll Image Encode"
   s.description = "Jekyll tag that renders base64 codes of images fetched from the web"

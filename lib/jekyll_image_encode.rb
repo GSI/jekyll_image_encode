@@ -35,7 +35,7 @@ module Jekyll
         else
           # p "Caching #{@url} as local base64 string ..."
           open(@url) do |image|
-            encoded_image = Base64.encode64(image.read)
+            encoded_image = Base64.strict_encode64(image.read)
           end
           self.cached_base64_codes.merge!(@url => encoded_image)
         end
