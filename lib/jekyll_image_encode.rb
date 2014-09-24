@@ -1,3 +1,5 @@
+require "mimemagic"
+
 module ImageEncodeCache
   @@cached_base64_codes = Hash.new
   
@@ -29,6 +31,7 @@ module Jekyll
         require 'base64'
         
         encoded_image = ''
+        data_type = MimeMagic.by_magic(open(@url))
 
         if self.cached_base64_codes.has_key? @url
           encoded_image = self.cached_base64_codes[@url]
@@ -40,7 +43,7 @@ module Jekyll
           self.cached_base64_codes.merge!(@url => encoded_image)
         end
         
-        "data:image;base64, #{encoded_image}"
+        "data:#{data_type};base64, #{encoded_image}"
       end
     end
   end
