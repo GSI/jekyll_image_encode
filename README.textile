@@ -32,6 +32,7 @@ In the source attribute of an HTML *img* element, call the *base64-tag* providin
 
 pre. <img src="{% base64 http://example.org/image.png %}" />
 
+This works for both remote (http://...) and local urls within your jekyll project. 
 
 h2. License
 
