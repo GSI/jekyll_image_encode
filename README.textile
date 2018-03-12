@@ -1,6 +1,6 @@
 h1. Jekyll Image Encode
 
-This Jekyll plugin fetches images from the web and renders their according base64 codes.
+This Jekyll plugin fetches images from the web and renders their corresponding base64 codes.
 
 For example, a **1x1 clear PNG** would become:
 
